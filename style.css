@@ -1,41 +1,135 @@
+
 * {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    box-sizing:content-box;
-    padding: 5%;
-    margin:auto;
+    font-family: monaco, lucida console, Helvetica, verdana, sans-serif, monospace;
+    margin: 0px;
+    padding: 5px;
 }
-
-html, body {
-    width: 100%;
-    height:100%;
-  }
-  
+img {
+    width: 400px; 
+    height: auto;
+}
 body {
-    background: linear-gradient(-45deg, #8fe979, #81f0ff, #b58dff, #f3f18f);
-    background-size: 500% 500%;
-    animation: gradient 30s ease-in;
-}
-  
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+    background-image: url("https://images.pexels.com/photos/618833/pexels-photo-618833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-origin:border-box;
+    background-size: 100%;
+    background-position-x:0;
+    background-position-y: 0;
 }
 
-.header nav {
-    float: right;
+div.nav-bar-container {
+    position:fixed;
+    width: 100%;
+    height:auto;
+    background-color: gainsboro;
+    /* margin: 10px; */
+    padding-bottom: 20px;
+    border:rgb(77, 77, 77) 5px solid;
+    border-radius: 10px;
 }
 
-.header nav ul {
+/* header {
+    position:fixed; 
+}*/
+
+h1 {
+    position:fixed;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+div.nav-container {
+    /* background-color: aliceblue;
+    opacity: 85%; */
+    /* border-radius: 10px;
+    border: 10px 10px 10px ghostwhite;
+    font-weight: 600; */
+}
+
+.nav-container {
+    /* background-color: aliceblue; */
+    /* display:flex; */
+    /* flex-direction: flex-wrap; */
+}
+
+ul {
     list-style-type: none;
+    display:flex;
+    justify-content: flex-end;
+
 }
 
-.header nav ul li {
-    display: inline-block;
+li {
+    color:rgb(21, 0, 138);
+    font-size: larger;
+}
+
+a {
+    color: rgb(21, 0, 138);
+
+}
+
+a:link {
+    color: rgb(21, 0, 138);
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline white;
+    /* background-color: rgb(46, 0, 252); */
+    text-transform: uppercase;
+    font-size: x-large;
+    color: rgb(255, 255, 255);
+    background-color: darkslateblue;
+    opacity: 100%;
+}
+
+a:active {
+    text-decoration: underline white;
+}
+
+div.slide {
+    margin-top: 100px;
+
+}
+
+.about-me-container {
+    background-color: gainsboro;
+    opacity: 80%;
+    margin-top: 150px;
+    padding:10px;
+    width: 50%;
+    font-size: 18px;
+}
+/*.container {
+
+}
+
+.introduction h1 {
+    font-size: 60px;
+    color: white;
+}
+
+.introduction nav {
+    float: right;
+    justify-content: right;
+}
+
+.introduction nav ul {
+}
+
+.introduction nav ul li {
+    display: inline;
+    list-style-type: none;
+} */
+
+footer {
+    font-size:x-small;
+    color: darkslategray;
 }
