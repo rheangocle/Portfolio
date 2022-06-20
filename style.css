@@ -1,7 +1,13 @@
 :root {
-    --font-co: rgb(21, 0, 138);
+    --font-co:#060f22; 
+    /* rgb(21, 0, 138); */
     --op-body: 85%;
     --pad-bot: 15px;
+    --light-blue: #a4c8ef;
+    --darker-blue:#3a5481;
+    --deep-blue: #060f22;
+    --gold: #ffe998;
+    --peach: #f0ceab;
 }
 
 
@@ -11,7 +17,7 @@
     /* padding-right: 5px; */
     scroll-padding: 5px;
     box-sizing: border-box;
-    color:darkslateblue;
+    /* color:darkslateblue; */
 }
 
 
@@ -27,6 +33,7 @@ body {
     background-size: contain;
     width: 100%;
     height: auto;
+    color:#060f22;
     /* need to edit this later to make look better */
 }
 
@@ -49,7 +56,7 @@ section h2 {
     border: rgb(255, 239, 239) 5px solid;
     border-radius: 5px;
     /* background: rgb(2,0,36); */
-    background: linear-gradient(45deg, #fdbb94 0%, #F7CE68 100%);
+    background: linear-gradient(45deg, var(--peach) 0%, var(--gold) 100%);
     z-index: 1000; 
     /* set this high to move header to front */
     background-color: white; 
@@ -169,11 +176,6 @@ a:active {
     text-decoration: underline white;
 }
 
-div.slide {
-    margin-top: 100px;
-
-}
-
 section {
     font-size: 18px;
 }
@@ -182,12 +184,12 @@ section {
     
 }
 .about-me-container {
-    background-color:#F7CE68;
+    background-color:var(--gold);
     opacity: var(--op-body);
     width: 50%;
     font-size: 18px;
-    margin-top: 100px;
     float: right;
+    padding: 120px 50px 50px;
 }
 
 /* .extraction-img {
@@ -198,13 +200,14 @@ section {
 } */
 
 .education {
-    background-color: rgb(188, 188, 255);
+    /* background-color: rgb(188, 188, 255); */
+    background-color: #a4c8ef;
     opacity: var(--op-body);
     /* color: darkslategrey; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    color: whitesmoke;
+    padding: 50px;
 } 
 
 .education img {
@@ -234,41 +237,45 @@ div.school {
     padding-bottom: var(--pad-bot);
 }
 
-/* need to edit the items inside this so they appear in line */
-.contact-container {
-    display: flex;
-    /* justify-content: center; */
-    flex-direction: column;
-    opacity: var(--op-body);
-    background-color: gainsboro;
-}
-
-.contact-container h2 {
-    padding-top: 15px;
-}
-
-
-.contact-container h3 {
-    display: flex;
-    justify-content: center;  
-}
-
-
+/* this is the background image */
 form {
     display: flex;
     flex-direction: column;
     /* size: 50%; */
-    padding: 10px;
+    padding: 60px;
+    /* background-color: #a4c8ef; */
+    opacity: var(--op-body);
+    background-image: url("https://images.unsplash.com/photo-1516542076529-1ea3854896f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-origin: border-box;
+}
+ /* this controls the background image */
+.contact-me:hover {
+    opacity: 65%;
 }
 
-form h3 {
-    padding-bottom: var(--pad-bot);
+/* this is the contact me box */
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: #a4c8ef;
+    opacity: var(--op-body);
+    padding: 15px;
+    width:fit-content;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #3a5481;
 }
 
-form > * {
+.form > * {
     display:flex;
-    justify-content:center;
+    flex-wrap: wrap;
+}
 
+.form:hover {
+    opacity: 100%;
+    background-color: #84b8f0;
 }
 
 form p {
@@ -279,17 +286,17 @@ form label {
     margin-right: 5px;
 }
 
-form input, form textarea {
+.form input, .form textarea {
     border-radius: 5px;
-    border:rgb(188, 188, 255) solid 3px;
+    border:#3a5481 solid 3px;
 }
 
-form .email-box {
+/* form .email-box {
     margin-left:-0px;
 }
 form .message-box {
     margin-left: 80px;
-}
+} */
 
 
 /*.container {
@@ -314,7 +321,42 @@ form .message-box {
     list-style-type: none;
 } */
 
-footer {
-    font-size:x-small;
-    color: darkslategray;
+footer {   
+    background-color:#3a5481;
+    color: whitesmoke;
+}
+footer ul {
+    list-style-type: none;
+}
+footer li {
+
+}
+/* footer h3 {
+    font-size: small;
+} */
+
+/* need to edit the items inside this so they appear in line */
+/* .contact-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: gainsboro;
+} */
+
+/* .contact-container h2 {
+    padding-top: 15px;
+} */
+
+/* 
+.contact-container h3 {
+    display: flex;
+    justify-content: center;  
+} */
+.footer {
+    display: flex;
+}
+
+footer h3{
+    display: flex;
+    justify-content: center;
 }
