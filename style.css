@@ -32,7 +32,7 @@ body {
     background-size: contain;
     width: 100%;
     height: auto;
-    color:#060f22;
+    color: var(--deep-blue);
     /* need to edit this later to make look better */
 }
 
@@ -46,36 +46,54 @@ section h2 {
     width: 400px; 
     height: auto;
 }
-.nav-bar-container {
+
+.head {
     position:fixed;
     width: 100%;
-    height:100px;
     top: 0;
     background: linear-gradient(45deg, var(--peach) 0%, var(--gold) 100%);
     z-index: 1000; 
     /* set this high to move header to front */
-    color:darkslategray;
     display: flex;
-    
+    flex-wrap: wrap;
 }
-.head {
-    display: flex;
+.head > * {
+    flex-basis 100%;
 }
-.nav-bar-container h1 {
+/*.head > *:nth-child(1) {
+  flex: 1 1 50%;
+  min-width: 25ch;
+}
+.head > *:nth-child(2) {
+  flex: 1 1 50%;
+  min-width: 15ch;
+}*/
+
+
+.head h1 {
     /* position:fixed; */
     font-size: 60px;
-    font-weight: 700;
     bottom: 15px;
     display: flex;
 }
 
-.nav-container {
+.navigation {
     display: flex;
-    /* bottom moves the nav words up */
-    padding: 10px;
 }
 
-nav {
+.navigation ul {
+    list-style-type: none;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.navigation > * {
+    flex-basis: 100%;
+}
+.navigation ul li {
+    color:var(--font-co);
+    font-size: larger;
+    margin: 10px;
     display: flex;
 }
 
@@ -92,7 +110,7 @@ h1:hover {
 
 
 .name:hover::after {
-    content: attr(data-name);
+    /* content: attr(data-name); */
     position: absolute;
     background: white;
     color: black;
@@ -106,33 +124,6 @@ h1:hover {
     margin-left: -250px;
 }
 
-div.nav-container {
-    display: flex;
-    justify-content: end;
-}
-
-.nav-container {
-    /* background-color: aliceblue; */
-    display:flex;
-    /* flex-direction: flex-wrap; */
-}
-
-nav .navigation {
-    /* display: block;
-    float: left; */
-} 
-.navigation ul {
-    list-style-type: none;
-    display:flex;
-    flex-wrap: wrap;
-}
-
-.navigation ul li {
-    color:var(--font-co);
-    font-size: larger;
-    justify-content: space-between;
-    margin: 10px;
-}
 
 a {
     color: var(--font-co);
@@ -312,37 +303,6 @@ button:focus {
     font-style: italic;
 }
 
-
-/* form .email-box {
-    margin-left:-0px;
-}
-form .message-box {
-    margin-left: 80px;
-} */
-
-
-/*.container {
-
-}
-
-.introduction h1 {
-    font-size: 60px;
-    color: white;
-}
-
-.introduction nav {
-    float: right;
-    justify-content: right;
-}
-
-.introduction nav ul {
-}
-
-.introduction nav ul li {
-    display: inline;
-    list-style-type: none;
-} */
-
 footer {   
     background-color:#3a5481;
     color: whitesmoke;
@@ -353,27 +313,7 @@ footer ul {
 footer li {
 
 }
-/* footer h3 {
-    font-size: small;
-} */
 
-/* need to edit the items inside this so they appear in line */
-/* .contact-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: gainsboro;
-} */
-
-/* .contact-container h2 {
-    padding-top: 15px;
-} */
-
-/* 
-.contact-container h3 {
-    display: flex;
-    justify-content: center;  
-} */
 .footer {
     display: flex;
 }
@@ -384,8 +324,14 @@ footer h3{
 }
 
 @media screen and (max-width: 768px) {
-    .nav-bar-container {
-        flex-direction: column;
+    .head {
+        justify-content: center;
+    }
+    .navigation ul li {
+        justify-content: center;
+    }
+    .navigation ul > * {
+        flex-basis: 100%;
     }
     
 }
