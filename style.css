@@ -186,7 +186,6 @@ section {
 .about-me-container {
     background-color:var(--gold);
     opacity: var(--op-body);
-    width: 50%;
     font-size: 18px;
     float: right;
     padding: 120px 50px 50px;
@@ -250,6 +249,7 @@ form {
     background-repeat: no-repeat;
     position: relative;
     background-origin: border-box;
+    color: var(--deep-blue)
 }
  /* this controls the background image */
 .contact-me:hover {
@@ -271,6 +271,7 @@ form {
 .form > * {
     display:flex;
     flex-wrap: wrap;
+    padding-bottom: 5px;
 }
 
 .form:hover {
@@ -290,6 +291,13 @@ form label {
     border-radius: 5px;
     border:#3a5481 solid 3px;
 }
+form h3 {
+    text-decoration: underline 3px white;
+}
+button:focus {
+    font-style: italic;
+}
+
 
 /* form .email-box {
     margin-left:-0px;
