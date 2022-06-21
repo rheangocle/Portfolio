@@ -73,7 +73,6 @@ section h2 {
 .head h1 {
     /* position:fixed; */
     font-size: 60px;
-    bottom: 15px;
     display: flex;
 }
 
@@ -104,8 +103,8 @@ h1:hover {
 
 /* changing the .name affects positioning of both name and nav panel */
 .name {
-    position: relative;
-    margin: 10px 20px;
+    /* position: relative; */
+    padding: 15px;
 }
 
 
@@ -327,8 +326,12 @@ footer h3{
     .head {
         justify-content: center;
     }
+    .head h1 {
+        font-size: 35px;
+    }
     .navigation ul li {
-        justify-content: center;
+        justify-content: flex-start;
+        font-size: small;
     }
     .navigation ul > * {
         flex-basis: 100%;
