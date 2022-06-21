@@ -181,21 +181,50 @@ section {
 }
 
 .about-me {
-    
-}
-.about-me-container {
-    background-color:var(--gold);
-    opacity: var(--op-body);
-    font-size: 18px;
-    float: right;
-    padding: 120px 50px 50px;
+    padding-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-/* .extraction-img {
-    float: right;
+.about-me-container {
+    /* background-color:var(--gold); */
+    opacity: var(--op-body);
+    padding: 120px 50px 50px;
 }
-.lab-img {
-    float: right;
+.self-img a {
+    display: flex;
+    width: 35%;
+    /* when height is set to auto, the image is scaled */
+    height:fit-content;
+    max-width: 400px;
+}
+
+.linkedin-img:hover {
+    opacity: 75%;
+}
+
+.linkedin-img:hover::after{
+    content:"LinkedIn Profile";
+    ;
+}
+.about-me-container div {
+    display: flex;
+    width:fit-content;
+}
+
+.about-me-info {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gold);
+    opacity: var(--op-body);
+    padding: 50px;  
+    height:auto; 
+    width: 100%;
+}
+
+/* .about-me-info * {
+    display: flex;
+    justify-content: flex-end;
 } */
 
 .education {
