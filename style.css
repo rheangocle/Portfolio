@@ -15,7 +15,6 @@
     font-family: 'Montserrat', sans-serif;
     margin: 0px;
     /* padding-right: 5px; */
-    scroll-padding: 5px;
     box-sizing: border-box;
     /* color:darkslateblue; */
 }
@@ -52,45 +51,33 @@ section h2 {
     width: 100%;
     height:100px;
     top: 0;
-    /* margin: 10px; */
-    border: rgb(255, 239, 239) 5px solid;
-    border-radius: 5px;
-    /* background: rgb(2,0,36); */
     background: linear-gradient(45deg, var(--peach) 0%, var(--gold) 100%);
     z-index: 1000; 
     /* set this high to move header to front */
-    background-color: white; 
     color:darkslategray;
+    display: flex;
     
 }
-/* .head {
+.head {
     display: flex;
-    justify-content: left;
-} */
-.head h1 {
+}
+.nav-bar-container h1 {
     /* position:fixed; */
     font-size: 60px;
     font-weight: 700;
     bottom: 15px;
+    display: flex;
 }
 
 .nav-container {
-    position: relative;
-    /* display: flex;
-    justify-content: flex-end;
-    align-items: flex-start; */
-    bottom:100px; 
+    display: flex;
     /* bottom moves the nav words up */
     padding: 10px;
 }
 
-/* .navigation ul li {
-    display: block;
-    float: left;
-    position: relative;
-} */
-
-
+nav {
+    display: flex;
+}
 
 h1:hover {
     font-size: 70px;
@@ -137,8 +124,7 @@ nav .navigation {
 .navigation ul {
     list-style-type: none;
     display:flex;
-    justify-content: flex-end;
-
+    flex-wrap: wrap;
 }
 
 .navigation ul li {
@@ -199,11 +185,11 @@ section {
     max-width: 400px;
 }
 
-.linkedin-img:hover {
+.github-img-link:hover {
     opacity: 75%;
 }
 
-.linkedin-img:hover::after{
+.github-img-link:hover::after{
     content:"LinkedIn Profile";
     ;
 }
@@ -216,7 +202,7 @@ section {
     display: flex;
     flex-direction: column;
     background-color: var(--gold);
-    opacity: var(--op-body);
+    opacity: 90%;
     padding: 50px;  
     height:auto; 
     width: 100%;
@@ -235,7 +221,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 50px;
+    /* padding: 50px; */
 } 
 
 .education img {
@@ -278,7 +264,6 @@ form {
     background-repeat: no-repeat;
     position: relative;
     background-origin: border-box;
-    color: var(--deep-blue)
 }
  /* this controls the background image */
 .contact-me:hover {
@@ -396,4 +381,11 @@ footer li {
 footer h3{
     display: flex;
     justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-bar-container {
+        flex-direction: column;
+    }
+    
 }
