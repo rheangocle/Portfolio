@@ -8,6 +8,8 @@
     --deep-blue: #060f22;
     --gold: #ffe998;
     --peach: #f0ceab;
+    --off-white: #ededec;
+    --section-pad: 50px;
 }
 
 
@@ -36,15 +38,13 @@ body {
     /* need to edit this later to make look better */
 }
 
+section {
+  padding: 50px;
+}
 /* Added thicker white underline beneath section headings */
 section h2 {
     text-decoration: underline whitesmoke 3px;
     padding-bottom: var(--pad-bot);
-}
-
-.about-me img {
-    width: 400px; 
-    height: auto;
 }
 
 .head {
@@ -60,20 +60,12 @@ section h2 {
 .head > * {
     flex-basis 100%;
 }
-/*.head > *:nth-child(1) {
-  flex: 1 1 50%;
-  min-width: 25ch;
-}
-.head > *:nth-child(2) {
-  flex: 1 1 50%;
-  min-width: 15ch;
-}*/
-
 
 .head h1 {
     /* position:fixed; */
     font-size: 60px;
     display: flex;
+    padding-left: 50px;
 }
 
 .navigation {
@@ -92,8 +84,10 @@ section h2 {
 .navigation ul li {
     color:var(--font-co);
     font-size: larger;
-    margin: 10px;
+    /* margin: 10px; */
     display: flex;
+    margin-top: 50px;
+    margin-right: 20px;
 }
 
 h1:hover {
@@ -107,9 +101,8 @@ h1:hover {
     padding: 15px;
 }
 
-
 .name:hover::after {
-    /* content: attr(data-name); */
+    content: attr(data-name); 
     position: absolute;
     background: white;
     color: black;
@@ -122,7 +115,6 @@ h1:hover {
     text-shadow: none;
     margin-left: -250px;
 }
-
 
 a {
     color: var(--font-co);
@@ -157,23 +149,51 @@ section {
 }
 
 .about-me {
-    padding-top: 25px;
+    margin-top: 125px;
     display: flex;
     flex-wrap: wrap;
 }
 
-.about-me-container {
-    /* background-color:var(--gold); */
-    opacity: var(--op-body);
-    padding: 120px 50px 50px;
+.about-me > *:nth-child(1) {
+  flex: 1 1 10%;
 }
-.self-img a {
+
+.about-me > *:nth-child(2) {
+  flex: 1 1 70%;
+}
+
+.about-me-info {
     display: flex;
-    width: 35%;
-    /* when height is set to auto, the image is scaled */
-    height:fit-content;
-    max-width: 400px;
+    flex-direction: column;
+    background-color: var(--gold);
+    opacity: var(--op-body);
+    padding: 50px;
 }
+/* .about-me img {
+    width: 400px; 
+    height: auto;
+} */
+
+.self-img {
+  display: flex;
+  justify-content: end;
+}
+
+.self-img a {
+  display: flex; 
+}
+
+.self-img a img {
+  max-width: 50vw;
+  max-height: 50vh;
+}
+
+/*.self-img a {
+    display: flex;
+    /*width: 35%;
+    /* when height is set to auto, the image is scaled */
+    /*height:fit-content;*/
+    /*max-width: 400px;*/
 
 .github-img-link:hover {
     opacity: 75%;
@@ -183,25 +203,6 @@ section {
     content:"LinkedIn Profile";
     ;
 }
-.about-me-container div {
-    display: flex;
-    width:fit-content;
-}
-
-.about-me-info {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--gold);
-    opacity: 90%;
-    padding: 50px;  
-    height:auto; 
-    width: 100%;
-}
-
-/* .about-me-info * {
-    display: flex;
-    justify-content: flex-end;
-} */
 
 .education {
     /* background-color: rgb(188, 188, 255); */
@@ -257,7 +258,7 @@ form {
 }
  /* this controls the background image */
 .contact-me:hover {
-    opacity: 65%;
+    opacity: 75%;
 }
 
 /* this is the contact me box */
@@ -322,19 +323,50 @@ footer h3{
     justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 350px) and (max-width: 716px) {
     .head {
         justify-content: center;
     }
+
     .head h1 {
         font-size: 35px;
     }
-    .navigation ul li {
-        justify-content: flex-start;
-        font-size: small;
+
+    .name {
+        padding: 0px;
     }
+    .navigation ul li {
+        justify-content: center;
+        font-size: medium;
+        text-decoration: underline 3px var(--off-white) solid;
+        margin-top: 0px;
+        margin-right: 20px;
+        padding-bottom: 10px;
+
+    }
+
     .navigation ul > * {
-        flex-basis: 100%;
+        flex-basis: 25%;
     }
     
 }
+/* @media screen and (max-width: 900px) {
+    
+    
+} */
+@media screen and (min-width: 715px) and (max-width: 911px) {
+    .self-img {
+        justify-content: center;
+    }
+    .navigation ul li {
+        margin-top: 0px;
+    }
+
+}
+
+@media screen and (min-width: 912px) and (max-width: 1455px) {
+    .self-img {
+        justify-content: center;
+    }
+}
+
