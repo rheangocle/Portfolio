@@ -349,6 +349,9 @@ footer h3{
         flex-basis: 25%;
     }
     
+    .self-img {
+        justify-content: center;
+    }
 }
 /* @media screen and (max-width: 900px) {
     
