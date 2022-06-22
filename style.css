@@ -10,6 +10,7 @@
     --peach: #f0ceab;
     --off-white: #ededec;
     --section-pad: 50px;
+    font-size: 1rem;
 }
 
 
@@ -63,7 +64,7 @@ section h2 {
 
 .head h1 {
     /* position:fixed; */
-    font-size: 60px;
+    font-size: 4em;
     display: flex;
     padding-left: 50px;
 }
@@ -91,7 +92,7 @@ section h2 {
 }
 
 h1:hover {
-    font-size: 70px;
+    font-size: 4.1rem;
     text-shadow: 5px 3px 3px #fffaed;
 }
 
@@ -101,20 +102,6 @@ h1:hover {
     padding: 15px;
 }
 
-.name:hover::after {
-    content: attr(data-name); 
-    position: absolute;
-    background: white;
-    color: black;
-    padding: 10px;
-    top: 0px;
-    width: 200px;
-    font-size: 14px;
-    border-radius: 10px;
-    margin-top: 90px;
-    text-shadow: none;
-    margin-left: -250px;
-}
 
 a {
     color: var(--font-co);
@@ -131,10 +118,10 @@ a:visited {
 }
 
 a:hover {
-    text-decoration: underline white;
+    /*text-decoration: underline white;*/
     /* background-color: rgb(46, 0, 252); */
     text-transform: uppercase;
-    font-size: x-large;
+    font-size: 1.2rem;
     color: rgb(21, 0, 138);
     background-color: bisque;
     opacity: 100%;
@@ -188,20 +175,15 @@ section {
   max-height: 50vh;
 }
 
-/*.self-img a {
-    display: flex;
-    /*width: 35%;
-    /* when height is set to auto, the image is scaled */
-    /*height:fit-content;*/
-    /*max-width: 400px;*/
-
-.github-img-link:hover {
+.linkedin-img-hover {
     opacity: 75%;
 }
 
-.github-img-link:hover::after{
+.linkedin-img:hover::after{
     content:"LinkedIn Profile";
     ;
+    font-size: 1rem;
+    text-transform: none;
 }
 
 .education {
@@ -228,6 +210,51 @@ section {
 .education-container {
     display: flex;
     flex-wrap:wrap;
+}
+
+.work-container {
+  display: flex;
+  flex-wrap: wrap;
+  opacity: var(--op-body);
+}
+
+.work-container > * {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.work-container > *:nth-child(1) {
+  flex: 1 1 5%;
+  border-right: 2px var(--darker-blue) solid;  
+}
+
+.work-container > *:nth-child(2) {
+  flex: 1 1 25%;
+  margin-right: 10px;
+}
+.work-container > *:nth-child(3) {
+  flex: 1 1 40%;
+}
+
+.work-container > *:nth-child(4) {
+  flex: 1 1 30%;
+}
+
+.work-container a img {
+    min-width: 100px;
+    border-radius: 10px;
+    object-fit: contain;
+    max-width: 40vw;
+}
+
+.work-container h3 {
+  justify-content: center;
+  align-content: end;
+}
+
+.work-ethic {
+    background-color: var(--peach);
+    opacity: var(--op-body);
 }
 
 div.school {
@@ -307,37 +334,68 @@ footer {
     background-color:#3a5481;
     color: whitesmoke;
 }
+
 footer ul {
     list-style-type: none;
 }
-footer li {
+.footer-links a {
+    color: white;
+}
 
+.footer-links a:hover {
+    background-color: var(--darker-blue);
+    color: var(--gold);
 }
 
 .footer {
     display: flex;
 }
+.footer-links {
+    display: flex;
+    margin: 15px 0px 15px 15px;
+}
 
-footer h3{
+.footer-links li {
+  margin-right: 15px;
+}
+
+
+footer h4{
     display: flex;
     justify-content: center;
+    font-size: 0.6rem;
+}
+
+.footer-contact {
+  margin: 15px;
 }
 
 @media screen and (min-width: 350px) and (max-width: 716px) {
+    
     .head {
         justify-content: center;
     }
 
     .head h1 {
-        font-size: 35px;
+        font-size: 2.1rem;
     }
-
+  
+    section p, footer p {
+        font-size: 0.9rem;
+    }
+    
+    h2 {
+      font-size: 1.2rem;
+    }
+    h3 {
+      font-size: 1.0rem;
+    }
     .name {
         padding: 0px;
     }
     .navigation ul li {
         justify-content: center;
-        font-size: medium;
+        font-size: 0.8rem;
         text-decoration: underline 3px var(--off-white) solid;
         margin-top: 0px;
         margin-right: 20px;
