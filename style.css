@@ -27,7 +27,7 @@ body {
     /* added line height to space things out */
     line-height: 1.7;
     background-color:rgb(245, 243, 220);
-    background-image: url("https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80");
+    background-image: url("https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80"), url("https://images.unsplash.com/photo-1605723517503-3cadb5818a0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
     /* background-position: center; */
     background-repeat: no-repeat;
     position: relative;
@@ -59,6 +59,7 @@ img:hover {
     /* set this high to move header to front */
     display: flex;
     flex-wrap: wrap;
+    color: var(--deep-blue);
 }
 .head > * {
     flex-basis 100%;
@@ -157,6 +158,7 @@ section {
     background-color: var(--gold);
     opacity: var(--op-body);
     padding: 50px;
+    border-radius: 10px;
 }
 /* .about-me img {
     width: 400px; 
@@ -173,8 +175,9 @@ section {
 }
 
 .self-img a img {
-  max-width: 50vw;
-  max-height: 50vh;
+  max-width: 30vw;
+  max-height: 30vh;
+  border-radius: 10px;
 }
 
 .linkedin-img-hover {
@@ -189,14 +192,11 @@ section {
 }
 
 .education {
-    /* background-color: rgb(188, 188, 255); */
     background-color: #a4c8ef;
     opacity: var(--op-body);
-    /* color: darkslategrey; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    /* padding: 50px; */
 } 
 
 .education img {
@@ -427,7 +427,7 @@ footer h4{
 
 }
 
-@media screen and (min-width: 912px) and (max-width: 1961px) {
+@media screen and (min-width: 912px) and (max-width: 1965px) {
     .self-img {
         justify-content: center;
     }
